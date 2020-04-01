@@ -1,0 +1,12 @@
+{% extends 'webapp_counter/base.html' %}
+
+
+{% block content %}
+<ul class="list-group">
+
+
+    {%  for word in words %}
+    <li class="list-group-item">{{ word }} : {{ word.count }}</li>
+    {% endfor %}
+</ul>
+{% endblock content %}
