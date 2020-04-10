@@ -1,11 +1,14 @@
-{% extends 'webapp_counter/base.html' %}
-
-
-{% block content %}
+{% extends 'webapp_counter/base.html' %} {% block content %}
+<h1>Getting Started</h1>
+<p>
+  To get going just enter the url of the site you want to see the top 10 words
+  of.
+</p>
 <form action="" method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <br>
-    <button type="submit" class="btn btn-primary">Send-Query</button>
+  {% csrf_token %} {{ form.as_p }}
+  <br />
+  <button type="submit" class="btn btn-outline-primary">
+    Fetch me the Top 10 words
+  </button>
 </form>
 {% endblock content %}
